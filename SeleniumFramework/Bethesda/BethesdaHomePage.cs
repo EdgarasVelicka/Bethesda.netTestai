@@ -15,5 +15,11 @@
         {
             Common.ClickElement(Locators.BethesdaHome.ConfirmCookieChoicesButton);
         }
+
+        public static void ClickLogInSignUpButton()
+        {
+            Common.ClickElement(Locators.BethesdaHome.LogInSignUpButton);
+        }
+
     }
 }
