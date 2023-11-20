@@ -7,7 +7,7 @@ Prerequisite: webpage Bethesda.net is opened, and cookies confirmed.
 
 I. Login/SignUp form functionality
 
-   1. SignUp using invalid email
+  1. SignUp using invalid email
    
      * Click 'Login/SignUp' button
      * Click 'SignUp' button
@@ -16,9 +16,9 @@ I. Login/SignUp form functionality
      * Enter invalid email
      * Click continue
       
-   Expected result: email input border changes to red.
+   Expected result: email input border color changes to red.
 
-   2. Login using random username
+  2. Login using random username
       
      * Click 'Login/SignUp' button
      * Enter 'random' username
@@ -27,7 +27,7 @@ I. Login/SignUp form functionality
    
    Expected result: appears error message: 'Incorrect username or password. Please try again'.
 
-   3. Login using valid credentials
+  3. Login using valid credentials
      
      * Click 'Login/SignUp' button
      * Enter existing 'username'
