@@ -26,10 +26,10 @@ namespace SeleniumTests.BethesdaTests
 
         [Test, Order(2)]
 
-        public static void LoginWithInvalidCredentials()
+        public static void LoginUsingRandomUsernameAndPassword()
         {
-            string username = "example";
-            string password = "password";
+            string username = "random";
+            string password = "random";
             string expectedErrorMessage = "Incorrect username or password. Please try again.";
 
             BethesdaHomePage.ClickLogInSignUpButton();
@@ -52,7 +52,7 @@ namespace SeleniumTests.BethesdaTests
             LoginSignUpForm.EnterPassword(password);
             LoginSignUpForm.ClickLoginButton();
 
-            Assert.That(LoginSignUpForm.VisibleUsername(), Is.EqualTo(username));
+            Assert.That(LoginSignUpForm.VisibleUsernameIcon(), Is.EqualTo(username));
         }
     }
 }

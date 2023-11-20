@@ -47,7 +47,7 @@
             return Common.GetElementText(Locators.LoginSignUp.ErrorMessage);
         }
 
-        public static string VisibleUsername()
+        public static string VisibleUsernameIcon()
         {
             return Common.GetElementText(Locators.LoginSignUp.UsernameVisible);
         }
