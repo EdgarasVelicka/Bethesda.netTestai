@@ -5,58 +5,58 @@ companies products, purchase them, create accounts, to ease accessibility to web
 
 Prerequisite: webpage Bethesda.net is opened, and cookies confirmed.
 
-I. Login/SignUp form functionality
+1. Login/SignUp form functionality
 
-  1. SignUp using invalid email
+  a. SignUp using invalid email
    
-     * Click 'Login/SignUp' button
-     * Click 'SignUp' button
-     * Choose a country: 'Lithuania'
-     * Click 'Create account' button
-     * Enter invalid email
-     * Click continue
+     1. Click 'Login/SignUp' button
+     2. Click 'SignUp' button
+     3. Choose a country: 'Lithuania'
+     4. Click 'Create account' button
+     5. Enter invalid email
+     6. Click continue
       
    Expected result: email input border color changes to red.
 
-  2. Login using random username
+  b. Login using random username
       
-     * Click 'Login/SignUp' button
-     * Enter 'random' username
-     * Enter 'random' password
-     * Click 'Login' button
+     1. Click 'Login/SignUp' button
+     2. Enter 'random' username
+     3. Enter 'random' password
+     4. Click 'Login' button
    
    Expected result: appears error message: 'Incorrect username or password. Please try again'.
 
-  3. Login using valid credentials
+  c. Login using valid credentials
      
-     * Click 'Login/SignUp' button
-     * Enter existing 'username'
-     * Enter existing 'password'
-     * Click 'Login' button
+     1. Click 'Login/SignUp' button
+     2. Enter existing 'username'
+     3. Enter existing 'password'
+     4. Click 'Login' button
       
    Expected result: entered 'username' appears on menu bar.
 
-II. Search functionality
+2. Search functionality
   
-   1. Confirm that results of entered text are displayed
-
-      * Click 'Search' icon
-      * Enter text: 'Elder scrolls skyrim'
-      * Click 'Search' button
-      * Click 'Help' tab
+  a. Confirm that results of entered text are displayed
+                                                              
+     1. Click 'Search' icon
+     2. Enter text: 'Elder scrolls skyrim'
+     3. Click 'Search' button
+     4. Click 'Help' tab
 
    Expected result: 10 results for 'Elder scrolls skyrim' in 'Help'
 
-III. Game purchase functionality
+3. Game purchase functionality
    
-   1. Confirm that selected game page is opened 
+  a. Confirm that selected game page is opened 
 
-      * Click 'Login/SignUp' button
-      * Enter existing 'username'
-      * Enter existing 'password'
-      * Click 'Login' button
-      * Click 'Menu' button
-      * Select 'Elder scrolls V' icon
+     1. Click 'Login/SignUp' button
+     2. Enter existing 'username'
+     3. Enter existing 'password'
+     4. Click 'Login' button
+     5. Click 'Menu' button
+     6. Select 'Elder scrolls V' icon
       
    Expected result: 'The Elder Scrolls | Bethesda.net' webpage is opened.
 
