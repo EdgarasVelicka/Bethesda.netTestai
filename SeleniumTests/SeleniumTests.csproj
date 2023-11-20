@@ -51,7 +51,8 @@
   <ItemGroup>
     <Compile Include="BaseTest.cs" />
     <Compile Include="BethesdaTests\BaseTestForBethesda.cs" />
-    <Compile Include="BethesdaTests\BethesdaHomePageTests.cs" />
+    <Compile Include="BethesdaTests\BethesdaGamePurchaseTest.cs" />
+    <Compile Include="BethesdaTests\BethesdSearchTest.cs" />
     <Compile Include="BethesdaTests\LoginSignUpFormTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
