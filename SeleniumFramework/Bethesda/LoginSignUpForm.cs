@@ -52,13 +52,9 @@
             return Common.GetElementText(Locators.LoginSignUp.UsernameVisible);
         }
 
-        public static void ClearCountryInput()
-        {
-            Common.ClickElement(Locators.LoginSignUp.ClearCountryInput);
-        }
-
         public static void SelectCountry(string country)
         {
+            Common.ClickElement(Locators.LoginSignUp.ClearCountryInput);
             Common.SendKeysToElement(Locators.LoginSignUp.SelectCountry, country);
             Common.ClickElement(Locators.LoginSignUp.ClearCountryInput);
         }

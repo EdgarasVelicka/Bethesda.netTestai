@@ -15,7 +15,6 @@ namespace SeleniumTests.BethesdaTests
 
             BethesdaHomePage.ClickLogInSignUpButton();
             LoginSignUpForm.ClickSignUpButton();
-            LoginSignUpForm.ClearCountryInput();
             LoginSignUpForm.SelectCountry(country);
             LoginSignUpForm.ClickCreateAccountButton();
             LoginSignUpForm.EnterEmail(email);
