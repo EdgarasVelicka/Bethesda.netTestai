@@ -2,11 +2,18 @@
 {
     internal class Locators
     {
-        internal class BethesdaHome
+        internal class BethesdaHomePage
         {
             internal static string ChangeCookiePreferencesButton = "//*[@id='onetrust-pc-btn-handler']";
             internal static string ConfirmCookieChoicesButton = "(//*[@tabindex='0'])[28]";
             internal static string LogInSignUpButton = "(//*[@aria-haspopup='dialog'])[2]";
+            internal static string SearchIcon = "//*[@href='/en/search']";
+            internal static string SearchInput = "//*[@id=\"search-input\"]";
+            internal static string SearchButton = "(//*[@role='button'])[1]";
+            internal static string Help = "(//*[@role='button'])[5]";
+            internal static string SearchResultsInHelp = "//*[@id=\"_bnContent\"]//header";
+            internal static string MenuIcon = "//*[@id=\"global-hamburger-menu\"]";
+            internal static string ElderScrollsVIcon = "(//*[@target='_blank'])[25]";
         }
         internal class LoginSignUp
         {

@@ -7,7 +7,7 @@ namespace SeleniumTests.BethesdaTests
     {
         [Test, Order(1)]
 
-        public static void EmailInputTurnsReedEnteringInvalidEmail()
+        public static void SignUpEmailInputTurnsRedEnteringInvalidEmail()
         {
             string email = "email";
             string emailInputBorderColor = "1.6px solid rgb(235, 61, 26)";
