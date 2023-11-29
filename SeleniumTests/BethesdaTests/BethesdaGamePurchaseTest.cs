@@ -7,7 +7,6 @@ namespace SeleniumTests.BethesdaTests
     internal class BethesdaGamePurchaseTest : BaseTestForBethesda
     {
         [Test]
-
         public static void ConfirmThatSelectedGamePageIsOpened()
         {
             string username = TestContext.Parameters.Get("bethesdaUsername");

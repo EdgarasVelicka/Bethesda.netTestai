@@ -12,8 +12,8 @@ namespace SeleniumTests.BethesdaTests
         {
             Driver.InitializeDriver();
             BethesdaHomePage.Open();
-            //BethesdaHomePage.ClickChangeCookiePreferencesButton();
-            //BethesdaHomePage.ClickConfirmCookieChoices();
+            BethesdaHomePage.ClickChangeCookiePreferencesButton();
+            BethesdaHomePage.ClickConfirmCookieChoices();
         }
 
         [TearDown]

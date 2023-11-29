@@ -6,6 +6,7 @@
         {
             Common.OpenPage("https://bethesda.net");
         }
+
         public static void ClickChangeCookiePreferencesButton()
         {
             Common.ClickElement(Locators.BethesdaHomePage.ChangeCookiePreferencesButton);

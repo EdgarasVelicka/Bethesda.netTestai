@@ -10,7 +10,7 @@ namespace SeleniumFramework
     {
         internal static void OpenPage(string url)
         {
-            Driver.driver.Value.Url = url;
+            Driver.GetDriver().Url = url;
         }
 
         private static IWebElement GetElement(string locator)
