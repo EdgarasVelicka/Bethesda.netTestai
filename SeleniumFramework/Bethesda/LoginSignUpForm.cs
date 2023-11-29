@@ -1,4 +1,6 @@
-﻿namespace SeleniumFramework.Bethesda
+﻿using OpenQA.Selenium;
+
+namespace SeleniumFramework.Bethesda
 {
     public class LoginSignUpForm
     {
@@ -14,17 +16,12 @@
 
         public static void EnterEmail(string email)
         {
-            Common.SendKeysToElement(Locators.LoginSignUp.EnterEmail, email);
-        }
-
-        public static void ClickButtonContinue()
-        {
-            Common.ClickElement(Locators.LoginSignUp.ButtonContinue);
+            Common.SendKeysToElement(Locators.LoginSignUp.EnterEmail, email + Keys.Enter);
         }
 
         public static string EmailInputBorderColor()
         {
-            return Common.GetElementCssPropertyValue(Locators.LoginSignUp.InputBorderColor, "border");
+            return Common.GetElementCssPropertyValue(Locators.LoginSignUp.InputBorderColor, "border-color");
         }
 
         public static void EnterUserName(string username)
@@ -44,19 +41,22 @@
 
         public static string ErrorMessageText()
         {
+            Common.WaitForElementToBeVisible(Locators.LoginSignUp.ErrorMessage);
             return Common.GetElementText(Locators.LoginSignUp.ErrorMessage);
         }
 
         public static string VisibleUsernameIcon()
         {
+            Common.WaitForElementToBeVisible(Locators.LoginSignUp.UsernameVisible);
             return Common.GetElementText(Locators.LoginSignUp.UsernameVisible);
         }
 
         public static void SelectCountry(string country)
         {
+            Common.WaitForElementToBeVisible(Locators.LoginSignUp.ClearCountryInput);
             Common.ClickElement(Locators.LoginSignUp.ClearCountryInput);
             Common.SendKeysToElement(Locators.LoginSignUp.SelectCountry, country);
-            Common.ClickElement(Locators.LoginSignUp.ClearCountryInput);
+            Common.ClickElement("//*[@class='MuiAutocomplete-popper']");
         }
     }
 }

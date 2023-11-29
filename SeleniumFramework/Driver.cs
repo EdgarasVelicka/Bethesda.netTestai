@@ -7,7 +7,7 @@ namespace SeleniumFramework
 {
     public class Driver
     {
-        internal static ThreadLocal<IWebDriver> driver = new ThreadLocal<IWebDriver>();
+        private static ThreadLocal<IWebDriver> driver = new ThreadLocal<IWebDriver>();
 
         public static void InitializeDriver()
         {

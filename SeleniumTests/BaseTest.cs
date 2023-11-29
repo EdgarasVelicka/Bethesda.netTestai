@@ -2,8 +2,6 @@
 using NUnit.Framework;
 using SeleniumFramework;
 
-
-
 namespace SeleniumTests
 {
     public class BaseTest

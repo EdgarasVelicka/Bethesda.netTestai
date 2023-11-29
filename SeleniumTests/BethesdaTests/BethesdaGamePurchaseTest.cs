@@ -7,7 +7,6 @@ namespace SeleniumTests.BethesdaTests
     internal class BethesdaGamePurchaseTest : BaseTestForBethesda
     {
         [Test]
-
         public static void ConfirmThatSelectedGamePageIsOpened()
         {
             string username = TestContext.Parameters.Get("bethesdaUsername");
@@ -19,7 +18,7 @@ namespace SeleniumTests.BethesdaTests
             LoginSignUpForm.EnterPassword(password);
             LoginSignUpForm.ClickLoginButton();
             BethesdaHomePage.ClickMenuIcon();
-            BethesdaHomePage.ClickElderScrollsVIcon();
+            BethesdaHomePage.ClickGameByTitle("The Elder Scrolls V: Skyrim Anniversary Edition");
 
             Assert.That(Driver.GetPageTitle, Is.EqualTo(expectedPageTitle));
         }

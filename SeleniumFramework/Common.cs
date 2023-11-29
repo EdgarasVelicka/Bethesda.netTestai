@@ -1,4 +1,5 @@
 ﻿using OpenQA.Selenium;
+using OpenQA.Selenium.Support.UI;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +10,7 @@ namespace SeleniumFramework
     {
         internal static void OpenPage(string url)
         {
-            Driver.driver.Value.Url = url;
+            Driver.GetDriver().Url = url;
         }
 
         private static IWebElement GetElement(string locator)
@@ -24,25 +25,21 @@ namespace SeleniumFramework
 
         internal static void ClickElement(string locator)
         {
-            System.Threading.Thread.Sleep(2000);
             GetElement(locator).Click();
         }
 
         internal static void SendKeysToElement(string locator, string keys)
         {
-            System.Threading.Thread.Sleep(2000);
             GetElement(locator).SendKeys(keys);
         }
 
         internal static string GetElementText(string locator)
         {
-            System.Threading.Thread.Sleep(2000);
             return GetElement(locator).Text;
         }
 
         internal static string GetElementCssPropertyValue(string locator, string propertyName)
         {
-            System.Threading.Thread.Sleep(2000);
             IWebElement element = GetElement(locator);
             return element.GetCssValue(propertyName);
         }
@@ -109,6 +106,46 @@ namespace SeleniumFramework
                     break;
                 }
             }
+        }
+
+        internal static void WaitForElementToBeVisible(string locator)
+        {
+            WebDriverWait wait = new WebDriverWait(Driver.GetDriver(), TimeSpan.FromSeconds(10));
+            wait.IgnoreExceptionTypes(typeof(NoSuchElementException));
+            wait.Until(d => d.FindElement(By.XPath(locator)));
+        }
+
+        internal static void WaitForPageToFullyLoad(int maxTimeout = 1000)
+        {
+            string pastPageSource = Driver.GetDriver().PageSource;
+            int timer = 0;
+
+            while (timer < maxTimeout)
+            {
+                string currentPageSource = Driver.GetDriver().PageSource;
+
+                if (pastPageSource != currentPageSource)
+                {
+                    timer = 0;
+                } 
+                else
+                {
+                    System.Threading.Thread.Sleep(50);
+                    timer += 50;
+                }
+
+                pastPageSource = currentPageSource;
+            }
+        }
+
+        internal static void WaitForElementToFinishTransitionToPosition(string locator, int expectedX, int expectedY)
+        {
+            WebDriverWait wait = new WebDriverWait(Driver.GetDriver(), TimeSpan.FromSeconds(10));
+            wait.Until(d =>
+            {
+                IWebElement element = d.FindElement(By.XPath(locator));
+                return element.Location.X == expectedX && element.Location.Y == expectedY;
+            });
         }
     }
 }

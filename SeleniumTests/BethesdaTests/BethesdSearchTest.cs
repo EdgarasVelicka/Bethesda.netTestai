@@ -6,7 +6,6 @@ namespace SeleniumTests.BethesdaTests
     internal class BethesdSearchTest : BaseTestForBethesda
     {
         [Test]
-
         public static void SearchResultsInHelpTab()
         {
             string enterText = "elder scrolls skyrim";
@@ -17,7 +16,7 @@ namespace SeleniumTests.BethesdaTests
             BethesdaHomePage.ClickSearchButton();
             BethesdaHomePage.ClickSearchResultsInHelp();
 
-            Assert.That(BethesdaHomePage.ActualSearchResults, Is.EqualTo(expectedSearchResultsInHelp));
+            Assert.That(BethesdaHomePage.ActualSearchResults(), Is.EqualTo(expectedSearchResultsInHelp));
         }
     }
 }
