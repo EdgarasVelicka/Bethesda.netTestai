@@ -17,7 +17,7 @@ namespace SeleniumTests.BethesdaTests
             BethesdaHomePage.ClickSearchButton();
             BethesdaHomePage.ClickSearchResultsInHelp();
 
-            Assert.That(BethesdaHomePage.ActualSearchResults, Is.EqualTo(expectedSearchResultsInHelp));
+            Assert.That(BethesdaHomePage.ActualSearchResults(), Is.EqualTo(expectedSearchResultsInHelp));
         }
     }
 }

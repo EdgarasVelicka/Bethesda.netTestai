@@ -19,7 +19,7 @@ namespace SeleniumTests.BethesdaTests
             LoginSignUpForm.EnterPassword(password);
             LoginSignUpForm.ClickLoginButton();
             BethesdaHomePage.ClickMenuIcon();
-            BethesdaHomePage.ClickElderScrollsVIcon();
+            BethesdaHomePage.ClickGameByTitle("The Elder Scrolls V: Skyrim Anniversary Edition");
 
             Assert.That(Driver.GetPageTitle, Is.EqualTo(expectedPageTitle));
         }

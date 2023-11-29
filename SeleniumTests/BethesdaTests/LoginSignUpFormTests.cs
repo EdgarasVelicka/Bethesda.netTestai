@@ -10,7 +10,7 @@ namespace SeleniumTests.BethesdaTests
         public static void SignUpEmailInputTurnsRedEnteringInvalidEmail()
         {
             string email = "email";
-            string emailInputBorderColor = "1.6px solid rgb(235, 61, 26)";
+            string emailInputBorderColor = "rgb(235, 61, 26)";
             string country = "Lithuania";
 
             BethesdaHomePage.ClickLogInSignUpButton();
@@ -18,7 +18,6 @@ namespace SeleniumTests.BethesdaTests
             LoginSignUpForm.SelectCountry(country);
             LoginSignUpForm.ClickCreateAccountButton();
             LoginSignUpForm.EnterEmail(email);
-            LoginSignUpForm.ClickButtonContinue();
 
             Assert.That(LoginSignUpForm.EmailInputBorderColor(), Is.EqualTo(emailInputBorderColor));
         }

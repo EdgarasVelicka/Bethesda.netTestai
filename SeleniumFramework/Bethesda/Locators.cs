@@ -27,7 +27,7 @@
             internal static string UserName = "//*[@id=\"username-input\"]";
             internal static string Password = "//*[@id=\"password-input\"]";
             internal static string LoginButton = "//*[@id=\"submitLoginBtn\"]";
-            internal static string ErrorMessage = "(//*[@role='status'])[2]";
+            internal static string ErrorMessage = "//*[@role='status']";
             internal static string UsernameVisible = " //*[@class='jss62']";
         }
     }
